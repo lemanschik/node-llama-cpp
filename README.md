@@ -35,13 +35,18 @@
 
 ## Installation
 ```bash
-npm install --save node-llama-cpp
+npm install --save node-llama-cpp@beta.34
 ```
 
 This package comes with pre-built binaries for macOS, Linux and Windows.
 
 If binaries are not available for your platform, it'll fallback to download the latest version of `llama.cpp` and build it from source with `cmake`.
 To disable this behavior set the environment variable `NODE_LLAMA_CPP_SKIP_DOWNLOAD` to `true`.
+
+***Note*** the prev --cuda flag got replaced by --gpu cuda --gpu amd
+```bash
+npx --no node-llama-cpp download --gpu cuda
+```
 
 ## Usage
 ```typescript
