@@ -48,6 +48,31 @@ To disable this behavior set the environment variable `NODE_LLAMA_CPP_SKIP_DOWNL
 npx --no node-llama-cpp download --gpu cuda
 ```
 
+```
+const model = new LlamaModel({
+    modelPath,
+    gpuLayers: 64 // or any other number of layers you want
+});
+```
+You'll see logs like these in the console when the model loads:
+```
+llm_load_tensors: ggml ctx size =    0.09 MB
+llm_load_tensors: using CUDA for GPU acceleration
+llm_load_tensors: mem required  =   41.11 MB (+ 2048.00 MB per state)
+llm_load_tensors: offloading 32 repeating layers to GPU
+llm_load_tensors: offloading non-repeating layers to GPU
+llm_load_tensors: offloading v cache to GPU
+llm_load_tensors: offloading k cache to GPU
+llm_load_tensors: offloaded 35/35 layers to GPU
+llm_load_tensors: VRAM used: 4741 MB
+```
+On Linux, you can monitor GPU usage with this command:
+
+````bash
+watch -d nvidia-smi
+```
+
+
 ## Usage
 ```typescript
 import {fileURLToPath} from "url";
