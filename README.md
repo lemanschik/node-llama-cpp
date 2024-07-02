@@ -27,6 +27,7 @@
 * Force a model to generate output in a parseable format, like JSON, or even force it to follow a specific JSON schema
 
 ## [Documentation](https://withcatai.github.io/node-llama-cpp/)
+* [Cuda Support](docs/guide/CUDA.md)
 * [Getting started guide](https://withcatai.github.io/node-llama-cpp/guide/)
 * [API reference](https://withcatai.github.io/node-llama-cpp/api/classes/LlamaModel)
 * [CLI help](https://withcatai.github.io/node-llama-cpp/guide/cli/)
